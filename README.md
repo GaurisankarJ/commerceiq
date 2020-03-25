@@ -3,7 +3,7 @@
 ## Heroku
 
 ```
-
+https://commerceiq-github-gaurisankarj.herokuapp.com/:organization/:repository/:statistic
 ```
 
 ## Local, PORT=3000
@@ -46,4 +46,11 @@ http://localhost:3000/:organization/:repository/:statistic
   * ***Code:*** 404 RESOURCE NOT FOUND
   * ***Code:*** 400 BAD REQUEST
 * **Sample Call:**
-  
+
+  ```
+  curl https://commerceiq-github-gaurisankarj.herokuapp.com/google/truth/commit_activity
+  ```
+
+## R
+
+> Plots inside R folder

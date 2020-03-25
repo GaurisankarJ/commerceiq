@@ -93,6 +93,13 @@ gitUtility.contributorsToCSV = (contributors) => {
 
 // Commit Activity to CSV
 gitUtility.commitActivityToCSV = (commitActivity) => {
+    commitActivity = commitActivity.map((item) => {
+        const date = new Date(item.week * 1000).toISOString().split("T")[0];
+        item.week = date;
+
+        return item;
+    });
+
     const fields = ["total", "week"]
         .concat([
             "days.sunday",
@@ -131,6 +138,12 @@ gitUtility.commitActivityToCSV = (commitActivity) => {
 
 // Code Frequency to CSV
 gitUtility.codeFrequencyToCSV = (codeFrequency) => {
+    codeFrequency = codeFrequency.map((item) => {
+        const date = new Date(item[0] * 1000).toISOString().split("T")[0];
+        item[0] = date;
+
+        return item;
+    });
     const fields = ["week", "addition", "deletion"];
 
     const transforms = (item) => {

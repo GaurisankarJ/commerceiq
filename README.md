@@ -9,6 +9,9 @@ https://commerceiq-github-gaurisankarj.herokuapp.com/:organization/:repository/:
 ## Local, PORT=3000
 
 ```
+// To install dependencies
+npm i
+
 // To run server
 npm start
 
